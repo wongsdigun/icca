@@ -1,1 +1,170 @@
-<h1>selamat datang di Meridian.id boilerplate</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>WWF - ICCA</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<!-- <link rel="stylesheet" href="../frontend/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="resources/frontend/css/styles.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet">
+</head>
+<body>
+
+	<nav>
+		<div class="nav-wrapper container">
+			<p class="nav-header center">header title in here</p>
+			<ul id="nav-mobile" class="left hide-on-med-and-down">
+				<a href="#" class="brand-logo">Logo</a>
+			</ul>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="next.html">What next?</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="map"></div>
+	<section>
+		<div class="homepage-about">
+			<div class="container">
+				<row>
+					<div class="homepage-wrapper homepage-about--bg valign-wrapper">
+						<div class="col s12 homepage--content">
+							<h5>
+								ICCA is home to the world’s curious minds. From the clever to the controversial, find ideas worth making time for.
+							</h5>
+							<a class="waves-effect waves-light btn" role="button">button</a>
+						</div>
+					</div>
+				</row>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="homepage-next">
+			<div class="container">
+				<row>
+					<div class="homepage-wrapper homepage-next--bg valign-wrapper">
+						<div class="col s12 homepage--content">
+							<h5>What’s Next ?</h5>
+							<p>Pengalaman pendamping ICCA di Kalimantan dan rencana kedepannya.</p>
+							<a class="waves-effect waves-light btn" role="button">button</a>
+						</div>
+					</div>
+				</row>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<footer>
+			<div class="footer-wrapper valign-wrapper">
+				<div class="container">
+					<a href="#" class="footer-brand-logo">Logo</a>
+					<p class="footer-desc">Indigenous peoples’ and community conserved territories and areas</p>
+					<p class="footer-info">Send us your email at <span>hello@iccaconsortium.org</span> or give us a call on <span>+62-853-8291-6648</span></p>
+				</div>
+			</div>
+		</footer>
+	</section>
+
+<script>
+	var getUrl = window.location;
+	var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+	function initMap() {
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 6,
+			scrollwheel: false,
+			center: {lat: 1.4623681, lng: 114.3709352},
+		});
+
+		setMarkers(map);
+	}
+	var locations = [
+		['Danau Lindung Empangau', 0.739618, 112.381623, baseUrl+'/views/detail.html'],
+		['Hutan Adat Sebaju', -0.403066, 111.900838, baseUrl+'/views/detail.html'],
+		['Gunung Eno', -0.179977, 115.544896, baseUrl+'/views/detail.html'],
+		['Danau Lindung Hai', -2.306101, 113.448516, baseUrl+'/views/detail.htm]'],
+		['Tana\' Ulen Sungai Nggeng', 2.903709, 115.780068, baseUrl+'/views/detail.html'],
+		['Danau Sulup', -2.040324, 113.410551, baseUrl+'/views/detail.html'],
+		['Tana\' Ulen Batu Majang', 0.554401, 115.212871, baseUrl+'/view]/detail.html'],
+		['Tana\' Ulen Long Berini', 3.047800, 115.857007, baseUrl+'/views/detail.html']
+	];
+	function setMarkers(map) {
+				// Adds markers to the map.
+
+				// Marker sizes are expressed as a Size of X,Y where the origin of the image
+				// (0,0) is located in the top left of the image.
+
+				// Origins, anchor positions and coordinates of the marker increase in the X
+				// direction to the right and in the Y direction down.
+				var image = {
+					url: 'resources/frontend/img/pointer.png'
+				};
+				for (var i = 0; i < locations.length; i++) {
+					var beach = locations[i];
+					var marker = new google.maps.Marker({
+						position: {lat: beach[1], lng: beach[2]},
+						map: map,
+						icon: image,
+						url: beach[3],
+						title: beach[0],
+					});
+					google.maps.event.addListener(marker, 'click', function() {
+						window.open(marker.url);
+					});
+				}
+			}
+	// function initMap() {
+
+	// 	var map = new google.maps.Map(document.getElementById('map'), {
+	// 		zoom: 8,
+	// 		center: new google.maps.LatLng {-0.8564734, 113.7124238},
+	// 		mapTypeId: google.maps.MapTypeId.ROADMAP
+	// 	});
+
+	// 	var infowindow = new google.maps.InfoWindow();
+
+	// 	var marker, i;
+	// 	var image: "../resources/frontend/img/pointer.png"
+
+	// 	for (i = 0; i < locations.length; i++) {
+	// 		marker = new google.maps.Marker({
+	// 			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+	// 			map: map,
+	// 			icon: image
+	// 		});
+
+	// 		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	// 			return function() {
+	// 				infowindow.setContent(locations[i][0]);
+	// 				infowindow.open(map, marker);
+	// 				// window.location.href = this.url;
+	// 			}
+	// 		})(marker, i));
+	// 	}
+	// }
+
+	// var locations = [
+	// 	{lat: 0.739618, lng: 112.381623},
+	// 	{lat: -0.403066, lng: 111.900838},
+	// 	{lat: -0.179977, lng: 115.544896},
+	// 	{lat: -2.306101, lng: 113.448516},
+	// 	{lat: 2.903709, lng: 115.780068},
+	// 	{lat: -2.040324, lng: 113.410551},
+	// 	{lat:  0.554401, lng: 115.212871},
+	// 	{lat: 3.047800, lng: 115.857007}
+	// ]
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdQd3pfXyVl4B0wAMFmbjwT1WZsmz6mZY&callback=initMap"
+		async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- <script src="../frontend/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<!-- <script src="../resources/frontend/js/main.js"></script> -->
+</body>
+</html>
