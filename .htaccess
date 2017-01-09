@@ -1,4 +1,4 @@
 RewriteEngine On
 
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_= [NC]
-RewriteRule ^ http://localhost:3000/icca/views/ [R=301,L,NE]
+RewriteRule ^ https://wongsdigun.github.io/icca/views/ [R=301,L,NE]
