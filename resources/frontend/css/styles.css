@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'kievit';
+  src: url("../fonts/kievit/FF-Kievit-Pro-Bold.otf");
+  /* IE9 Compat Modes */ }
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+#map {
+  height: 80vh; }
+
+#map-detail {
+  height: 50vh; }
+
+a[role="button"] {
+  color: #fff;
+  background-color: #8dc63f;
+  border: 1px solid #8dc63f;
+  box-shadow: none;
+  text-transform: uppercase;
+  width: auto;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  font-weight: 500; }
+  a[role="button"]:hover {
+    color: #8dc63f;
+    background-color: #fff;
+    border: 1px solid #8dc63f;
+    box-shadow: none; }
+
+nav {
+  background-color: #fff;
+  box-shadow: none; }
+  nav ul.right a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.87; }
+  nav ul a {
+    color: #333 !important; }
+  nav .nav-header {
+    margin: 0;
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 900;
+    color: #333;
+    padding: 0;
+    white-space: nowrap; }
+    nav .nav-header.center {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%); }
+
+.container {
+  width: 85%; }
+
+iframe {
+  margin-bottom: 96px;
+  width: 100%; }
+
+section .homepage {
+  background-color: #fbfbfb; }
+  section .homepage--content {
+    width: 45%; }
+    section .homepage--content h5 {
+      color: #333;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -1.3px;
+      margin: 0; }
+    section .homepage--content p {
+      color: #333;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.33;
+      letter-spacing: -1px;
+      margin: 24px 0 0 0; }
+    section .homepage--content a {
+      margin-top: 32px; }
+  section .homepage-wrapper {
+    max-height: 400px;
+    height: 60vh; }
+  section .homepage-about {
+    background-color: aqua; }
+  section .homepage-next {
+    background-color: teal; }
+section .article {
+  padding: 100px 0;
+  background-color: #fbfbfb; }
+  section .article h4 {
+    font-size: 44px;
+    font-weight: 800;
+    font-family: 'kievit', serif;
+    line-height: .91;
+    letter-spacing: -1.8px;
+    color: #007931;
+    margin-bottom: 76px; }
+  section .article-header_article {
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'kievit', serif;
+    letter-spacing: -1.3px;
+    color: #333;
+    margin-bottom: 28px; }
+  section .article-subheader_article {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'kievit', serif;
+    letter-spacing: -1.3px;
+    color: #333;
+    margin-bottom: 28px; }
+  section .article-content_article {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -.5px;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 60px;
+    white-space: pre-line;
+    width: 70%; }
+    section .article-content_article:nth-last-child(1) {
+      margin-bottom: 0; }
+  section .article-button {
+    color: #007931;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 0.8px;
+    margin-bottom: 70px;
+    padding: 5px 15px !Important; }
+    section .article-button i {
+      font-size: 24px;
+      line-height: 1.15; }
+section .details-toc-header {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: -.4px;
+  margin: 35px 0 24px 0; }
+section .details-toc-li {
+  color: rgba(0, 121, 49, 0.9);
+  display: block;
+  font-size: 18px;
+  line-height: 1.56;
+  margin-bottom: 12px;
+  text-transform: capitalize; }
+section .details .article {
+  padding-top: 0; }
+  section .details .article #detailSlider .col {
+    height: 100%;
+    width: 185px; }
+  section .details .article-content_article {
+    width: 100%; }
+section footer .footer-wrapper {
+  height: 30vh; }
+section footer .footer-desc {
+  font-size: 16px;
+  line-height: 2.5;
+  letter-spacing: -.6px;
+  color: #333;
+  opacity: 0.54; }
+section footer .footer-info {
+  font-size: 16px;
+  letter-spacing: -.6px;
+  color: #666; }
+  section footer .footer-info span {
+    color: #007931; }
